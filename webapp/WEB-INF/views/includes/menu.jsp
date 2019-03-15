@@ -4,6 +4,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<spring:url value="/resources" var="urlPublicRes" />
+	<spring:url value="/" var="urlRoot" />	
+<link href="${urlPublicRes}/bootstrap/css/bootstrap.min.css" rel="stylesheet">		
+	<link href="${urlPublicRes}/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="${urlPublicRes}/bootstrap/js/bootstrap.js"></script> 
+	
 <meta charset="UTF-8">
 <title>Control de Permisos</title>
 </head>
@@ -24,12 +31,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li class="active"><a href="#">Medicos <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Servicios</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
+            <li><a href="${urlRoot}user/list">Usuarios</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
@@ -46,7 +53,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
+        <li><a href="${urlPublic}/ademac/user/register">Registrar</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
