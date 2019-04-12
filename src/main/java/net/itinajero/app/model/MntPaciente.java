@@ -27,6 +27,7 @@ public class MntPaciente {
 	private String lugarTrabajo;
 	private Integer estadoCivil;
 	private String ocupacion;
+	private String expediente;
 	public Integer getId() {
 		return id;
 	}
@@ -93,6 +94,20 @@ public class MntPaciente {
 	public void setOcupacion(String ocupacion) {
 		this.ocupacion = ocupacion;
 	}
+	public String getExpediente() {
+		return expediente;
+	}
+	public void setExpediente(String expediente) {
+		this.expediente = expediente;
+	}
+	@Override
+	public String toString() {
+		return "MntPaciente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion
+				+ ", fechaNacimiento=" + fechaNacimiento + ", sexo=" + sexo + ", conyuge=" + conyuge + ", telefono="
+				+ telefono + ", lugarTrabajo=" + lugarTrabajo + ", estadoCivil=" + estadoCivil + ", ocupacion="
+				+ ocupacion + ", expediente=" + expediente + "]";
+	}
+	
 	
 	
 	

@@ -6,4 +6,5 @@ public interface IMntPaciente {
 	List<MntPaciente> pacientes();
 	void insertar(MntPaciente paciente);
 	MntPaciente pacienteById(Integer id);
+	void eliminar(Integer id);
 }

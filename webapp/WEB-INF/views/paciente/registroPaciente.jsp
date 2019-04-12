@@ -20,6 +20,19 @@
 	rel="stylesheet">
 <link href="${urlPublic}/bootstrap/css/bootstrap-theme.css"
 	rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script>	
+	$( document ).ready(function() {
+	   var estadoCivil= $('#estadoCivil');
+	   estadoCivil.on('change',function(e){
+		   if(estadoCivil.val()==2){
+			   $('#divConyuge').show();	
+		   }else{
+			   $('#divConyuge').hide();
+		   }
+	   });
+	});
+	</script>
 
 
 </head>
@@ -79,6 +92,13 @@
 									 </form:select> 
 								</div>								
 							</div>
+							<div class="row-fluid" id="divConyuge"  style="display:none">
+								<div class="form-group has-feedback" style="align:center">
+									<label for="sel1">Conguge:</label> 
+									<form:input type="text" class="form-control" path="conyuge"
+										id="conyuge:" placeholder="conyuge" />
+								</div>								
+							</div>
 							<div class="row-fluid">
 								<div class="form-group">
 									<form:input type="text" class="form-control" path="ocupacion"
@@ -96,13 +116,17 @@
 									<form:input type="text" class="form-control" path="lugarTrabajo"
 										id="lugarTrabajo:" placeholder="Lugar de Trabajo" required="required" />
 								</div>
-							</div>
-							
+							</div>						
 							
 							
 							
 						
-							<div class="row-fluid"><button type="submit" class="btn btn-primary">Guardar</button></div>
+							<div class="row-fluid">
+								<button type="submit" class="btn btn-primary" name="btn_save" value="save">Guardar</button>
+								<button type="submit" class="btn btn-primary" name="btn_save"  value="cita">Guardar y Crear Cita</button>
+								<button type="submit" class="btn btn-primary" name="btn_save"  value="consulta">Guardar y pasar a cosnulta</button>
+							</div>
+
 						</div>
 					</div>
 				</div>

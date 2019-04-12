@@ -20,7 +20,7 @@
 		<property name="url"
 			value="jdbc:oracle:thin:@172.16.16.136:1521:orcl" />
 		<property name="username" value="igmer" />
-		<property name="password" value=12345 />
+		<property name="password" value="Fernando$1304" />
 	</bean>
 	<bean id="jpaVendorAdapter"
 		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">

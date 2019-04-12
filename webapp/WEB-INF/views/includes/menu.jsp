@@ -6,7 +6,7 @@
 <head>
 <spring:url value="/resources" var="urlPublicRes" />
 	<spring:url value="/" var="urlRoot" />	
-<link href="${urlPublicRes}/bootstrap/css/bootstrap.min.css" rel="stylesheet">		
+	<link href="${urlPublicRes}/bootstrap/css/bootstrap.min.css" rel="stylesheet">		
 	<link href="${urlPublicRes}/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="${urlPublicRes}/bootstrap/js/bootstrap.js"></script> 
@@ -37,7 +37,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="${urlRoot}user/list">Usuarios</a></li>
-            <li><a href="#">Another action</a></li>
+            <li><a href="${urlRoot}paciente/list">Pacientes</a></li>
             <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Separated link</a></li>
