@@ -81,18 +81,7 @@ public class MntPacienteController {
 	public String citaPaciente() {		
 		return "paciente/cita";
 	}
-	@GetMapping(value = "/buscarPaciente")
-	public @ResponseBody MntPaciente buscarPaciente() {		
-		MntPaciente px = new MntPaciente();
-		px.setApellido("sdsdf");
-		px.setNombre("sfs");
-		px.setExpediente("sf");
-		px.setDireccion("wF");
-		px.setFechaNacimiento(null);
-		px.setEstadoCivil(1);
-		px.setSexo("f");
-		return px.toString();
-	}
+	
 	
 	
 

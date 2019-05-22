@@ -2,6 +2,7 @@ package net.itinajero.app.service;
 
 import java.awt.print.Pageable;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -36,41 +37,13 @@ public class MyUserServiceJPA implements IUsuarioService{
 		if (optional.isPresent())
 			return optional.get();
 		return null;
-	}
-
-	@Override
-	public List<MyUser> buscarActivas() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<MyUser> buscarPorFecha(Date fecha) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
+	}	
 
 	@Override
 	public void eliminar(int idPelicula) {
 		userRepo.deleteById(idPelicula);
 		
-	}
+	}	
 
-	@Override
-	public Page<MyUser> buscarTodasPageable(Pageable page) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<String> buscarEstablecimientos() {
-		List<String> generos = new LinkedList<>();
-		generos.add("Accion");
-		generos.add("Accion");
-		generos.add("Accion");
-		return generos;
-	}
-
+	
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app>
+	<contex-root>/WEB-INF/root-context.xml</contex-root>
+	<container-descriptor>
+		<show-archived-real-path-enable>true</show-archived-real-path-enable>
+	</container-descriptor>
+</weblogic-web-app>
