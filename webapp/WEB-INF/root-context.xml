@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 		
 	
-	<context:component-scan base-package="net.itinajero.app.service"/>
+	<context:component-scan base-package="net.itinajero.app.service net.itinajero.app.controller"/>
 	<jpa:repositories base-package="net.itinajero.app.repository" />
 	
 	<bean id="dataSource"

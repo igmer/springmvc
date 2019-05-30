@@ -14,6 +14,7 @@ public class HomeController {
 
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String createAction(){
+		System.out.print("Aqui va iniciando");
 		return "home";
 	}
 	
