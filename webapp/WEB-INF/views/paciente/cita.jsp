@@ -7,30 +7,28 @@
 <title>Insert title here</title>
 <jsp:include page="../includes/menu.jsp"></jsp:include>
 <script>
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-function buscarPaciente(){
-	var nombre = $('#nombre').val();
-	var apellidos = $('#apellidos').val();
-	var expediente = $('#expediente').val();
-	$.ajax({
-        url: 'buscarPaciente',
-        dataType: "json",
-        type: "GET",
-        contentType: 'application/json',
-        mimeType: 'application/json',
-        data: 'uname1=' + $('#nombre').val(),
-        success: function(data){
-              alert('success')
-        },
-        error: function(xhr, status, error) {
-               console.log(error)
-        }
-    });
 
-	
-}
+	$(document).ready(function() {
+		
+		$("#form_data").submit(function(e) {
+			e.preventDefault()			
+			var expediente = $('#expediente').val();
+			$.ajax({
+				url : 'buscarPaciente' + '?expediente=' + expediente,
+				dataType : "json",
+				type : "GET",
+				contentType : 'application/json',
+				mimeType : 'application/json',
+				success : function(data) {
+					console.log(data.nombre);
+				},
+				error : function(xhr, status, error) {
+					console.log(error)
+				}
+			});
+
+		})
+	});
 </script>
 </head>
 <body>
@@ -41,11 +39,12 @@ function buscarPaciente(){
 <section class="content">
 	
         <table class="table table-bordered cuadro">
-            <tbody>                
+            <tbody>   
+            <form id="form_data" method="GET" name="form_data">             
                 <tr>
                     
                     <td class="sonata-ba-list-field-header "><strong>Nombres: </strong></td>
-                    <td><input id="nombre" name="cun" type="text" class="text form-control"></td>
+                    <td><input id="nombre" name="nombre" type="text" class="text form-control"></td>
                     <td class="sonata-ba-list-field-header "><strong>Apellidos:</strong></td>
                     <td><input id="apellidos" name="apellidos" class="nombres form-control" type="text" maxlength="25"></td>
                  </tr>
@@ -65,7 +64,7 @@ function buscarPaciente(){
                             <span class="glyphicon glyphicon-plus"></span>Capturar Datos
                         </a>
 
-                            <button id="buscar" class="btn btn-primary" onclick="buscarPaciente()">
+                            <button id="buscar" class="btn btn-primary" type="submit" >
                                 <span class="glyphicon glyphicon-search"></span>Buscar
                             </button>
                             <a id="limpiar" class="btn btn-primary" href="">
@@ -75,6 +74,7 @@ function buscarPaciente(){
 
                     </td>
                 </tr>
+                </form>
             </tbody>
         </table>
             <input id="procedencia" name="procedencia" value="c" type="hidden">

@@ -59,8 +59,8 @@
 						<td>${usuario.tipoEmpleado.tipo}</td>
 						<td>${usuario.establecimiento.nombre}</td>
 						<td>
-							<a href="${urlPeliculas}/ademac/user/edit/${usuario.id}" class="btn btn-success btn-sm" role="button" title="Edit"><span class="glyphicon glyphicon-pencil"></span></a>
-							<a href="${urlPeliculas}/ademac/user/delete/${usuario.id}" onclick='return confirm("¿Estas seguro?")' class="btn btn-danger btn-sm" role="button" title="Eliminar"><span class="glyphicon glyphicon-trash"></span></a>
+							<a href="${urlPeliculas}/comasagua/user/edit/${usuario.id}" class="btn btn-success btn-sm" role="button" title="Edit"><span class="glyphicon glyphicon-pencil"></span></a>
+							<a href="${urlPeliculas}/comasagua/user/delete/${usuario.id}" onclick='return confirm("ï¿½Estas seguro?")' class="btn btn-danger btn-sm" role="button" title="Eliminar"><span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 				</c:forEach>

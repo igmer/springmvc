@@ -64,16 +64,16 @@
 
 	<div class="row-fluid" style="text-align: center;">
 
-		<a href="/ademac/paciente/register" class="btn btn-dblue btn-lg"
+		<a href="/comasagua/paciente/register" class="btn btn-dblue btn-lg"
 			role="button"> <span class="glyphicon glyphicon-user glyphsize"
 			aria-hideen="true"></span> <span>Agregar paciente</span>
 		</a> 
-		<a href="/ademac/paciente/cita" class="btn btn-dblue btn-lg"
+		<a href="/comasagua/paciente/cita" class="btn btn-dblue btn-lg"
 			role="button"> <span
 			class="glyphicon glyphicon-calendar glyphsize" aria-hideen="true"></span>
 			<span>Crear Cita</span>
 		</a> 
-		<a href="/ademac/paciente/register" class="btn btn-dblue btn-lg"
+		<a href="/comasagua/paciente/register" class="btn btn-dblue btn-lg"
 			role="button"> <span class="glyphicon glyphicon-share glyphsize"
 			aria-hideen="true"></span> <span>Pasar a consulta</span>
 		</a>

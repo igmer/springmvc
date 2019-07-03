@@ -7,4 +7,5 @@ public interface IMntPaciente {
 	void insertar(MntPaciente paciente);
 	MntPaciente pacienteById(Integer id);
 	void eliminar(Integer id);
+	MntPaciente findByexpediente(String nombre);
 }

@@ -6,8 +6,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -80,6 +83,16 @@ public class MntPacienteController {
 	@GetMapping(value = "/cita")
 	public String citaPaciente() {		
 		return "paciente/cita";
+	}
+	@RequestMapping(value="/buscarPaciente", method = RequestMethod.GET)
+	public @ResponseBody MntPaciente buscarPaciente(@RequestParam("expediente") String expediente) {			
+		MntPaciente mntPaciente = servicePx.findByexpediente(expediente);
+		System.out.println(mntPaciente);
+		if (mntPaciente!= null) {
+			return mntPaciente;			
+		}
+		return null;
+			
 	}
 	
 	

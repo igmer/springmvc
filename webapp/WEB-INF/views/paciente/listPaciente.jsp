@@ -80,18 +80,18 @@
 							<td>${paciente.direccion}</td>
 
 							<td><a
-								href="${urlPeliculas}/ademac/paciente/cita/${paciente.id}"
+								href="${urlPeliculas}/comasagua/paciente/cita/${paciente.id}"
 								class="btn btn-primary btn-sm" role="button" title="Cita"><span
 									class="glyphicon glyphicon-calendar"></span></a> <a
-								href="${urlPeliculas}/ademac/paciente/consulta/${paciente.id}"
+								href="${urlPeliculas}/comasagua/paciente/consulta/${paciente.id}"
 								class="btn btn-info btn-sm" role="button" title="Consulta"><span
 									class="glyphicon glyphicon-folder-open"></span></a></td>
 							<td><a
-								href="${urlPeliculas}/ademac/paciente/edit/${paciente.id}"
+								href="${urlPeliculas}/comasagua/paciente/edit/${paciente.id}"
 								class="btn btn-success btn-sm" role="button" title="Editar"><span
 									class="glyphicon glyphicon-pencil"></span></a> <a
-								href="${urlPeliculas}/ademac/paciente/delete/${paciente.id}"
-								onclick='return confirm("¿Estas seguro?")'
+								href="${urlPeliculas}/comasagua/paciente/delete/${paciente.id}"
+								onclick='return confirm("ï¿½Estas seguro?")'
 								class="btn btn-danger btn-sm" role="button" title="Eliminar"><span
 									class="glyphicon glyphicon-trash"></span></a></td>
 

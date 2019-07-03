@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Inicio</a>
+      <a class="navbar-brand" href="${urlRoot}">Inicio</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +34,7 @@
         <li class="active"><a href="#">Medicos <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Servicios</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administración <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administracion <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="${urlRoot}user/list">Usuarios</a></li>
             <li><a href="${urlRoot}paciente/list">Pacientes</a></li>
@@ -53,7 +53,7 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="${urlPublic}/ademac/user/register">Registrar</a></li>
+        <li><a href="${urlPublic}/comasagua/user/register">Registrar</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">

@@ -38,6 +38,14 @@ public class MntPaceinteServiceJPA implements IMntPaciente {
 		repoPx.deleteById(id);
 		
 	}
+
+	@Override
+	public MntPaciente findByexpediente(String expediente) {	
+		System.out.print("repo "+expediente);
+	MntPaciente px = repoPx.findByexpediente(expediente);
+	
+		return px;
+	}
 	
 
 }
